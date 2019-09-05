@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" href="pyramidSlide.css">
+</head>
+<body onload="drawPyramid(heightElem)">
+
+    <div id="draw-form" class"center">
+        
+        Brick Symbol:
+        <select id="brick" onchange="drawPyramid(brickElem.value)">
+            <option value="#">#</option>
+            <option value="@">@</option>
+            <option value="X">X</option>
+            <option value="$">$</option>
+        </select>
+
+        Row Height:  
+        <input type="range" min="1" max="20" step="1" value="10" 
+                id="height"/><p id="heightNumber" oninput="drawPyramid(heightElem)"></p>        
+    </div>
+
+    <div id="pyramid"></div>
+
+    <script src="pyramid.js"></script>
+</body>
+</html>
