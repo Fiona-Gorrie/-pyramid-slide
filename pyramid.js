@@ -1,5 +1,5 @@
-var brickElem = document.getElementById("brick").value;
-var heightElem = document.getElementById("height").value;
+var brickElem = document.getElementById("brick");
+var heightElem = document.getElementById("height");
 
 //value of range displayed in heightNumber <p>
 //document.getElementById("heightNumber").innerHTML = heightElem;
@@ -18,7 +18,7 @@ function drawPyramid(height) {
     document.getElementById("pyramid").innerHTML = "";
 
     //change the height of pyramid 
-    document.getElementById("heightNumber").innerHTML = heightElem;
+    document.getElementById("heightNumber").innerHTML = heightElem.value;
 
     // for each row....
     for (var row = 0; row < height; row++) {
@@ -34,7 +34,7 @@ function drawPyramid(height) {
             rowStr += spaceChar;
         }
         for (var i = 0; i < numBricks; i++) {
-            rowStr += "#"; //rowStr += brickType.value;
+            rowStr += brickElem.value;
         }
 
         // make a <p> element for this row, and insert it into the #pyramid container
