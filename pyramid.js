@@ -1,5 +1,5 @@
-var brickElem = document.getElementById("brick");
-var heightElem = document.getElementById("height");
+let brickElem = document.getElementById("brick");
+let heightElem = document.getElementById("height");
 
 //value of range displayed in heightNumber <p>
 //document.getElementById("heightNumber").innerHTML = heightElem;
@@ -21,19 +21,19 @@ function drawPyramid(height) {
     document.getElementById("heightNumber").innerHTML = heightElem.value;
 
     // for each row....
-    for (var row = 0; row < height; row++) {
+    for (let row = 0; row < height; row++) {
 
         // figure out number of bricks and spaces
-        var numBricks = row + 2;
-        var numSpaces = height - row - 1;
+        let numBricks = row + 2;
+        let numSpaces = height - row - 1;
 
         // build up a string for this row
-        var rowStr = "";
-        for (var i = 0; i < numSpaces; i++) {
-            var spaceChar = "&nbsp";
+        let rowStr = "";
+        for (let i = 0; i < numSpaces; i++) {
+            let spaceChar = "&nbsp";
             rowStr += spaceChar;
         }
-        for (var i = 0; i < numBricks; i++) {
+        for (let i = 0; i < numBricks; i++) {
             rowStr += brickElem.value;
         }
 
